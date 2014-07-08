@@ -1,6 +1,6 @@
 {
   "name": "phant-output-thermalprinter",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "main": "lib/phant-output-thermalprinter.js",
   "description": "test metadata for phant development",
   "homepage": "https://github.com/sparkfun/phant-output-thermalprinter",
