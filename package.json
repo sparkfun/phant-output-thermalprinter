@@ -2,7 +2,7 @@
   "name": "phant-output-thermalprinter",
   "version": "1.0.1",
   "main": "lib/phant-output-thermalprinter.js",
-  "description": "test metadata for phant development",
+  "description": "Thermal printer output module for phant that uses SparkFun's COM-10438",
   "homepage": "https://github.com/sparkfun/phant-output-thermalprinter",
   "bugs": "https://github.com/sparkfun/phant-output-thermalprinter/issues",
   "author": {
@@ -15,6 +15,9 @@
     "url": "git://github.com/sparkfun/phant-output-thermalprinter"
   },
   "license": "GPL-3.0",
+  "engines": {
+    "node": "^0.10.29"
+  },
   "dependencies": {
     "async": "^0.9.0",
     "serialport": "^1.4.0"
@@ -28,5 +31,24 @@
   },
   "scripts": {
     "test": "grunt"
+  },
+  "phantConfig": {
+    "name": "Thermal Printer",
+    "options": [
+      {
+        "label": "Serial Port Path",
+        "name": "path",
+        "default": "/dev/ttyO0",
+        "type": "text",
+        "description": "The path to the serial port that the thermal printer is connected to."
+      },
+      {
+        "label": "Baud",
+        "name": "baud",
+        "default": "19200",
+        "type": "number",
+        "description": "The baud rate to use when connecting to the thermal printer."
+      }
+    ]
   }
 }
